@@ -4,7 +4,7 @@ export ARCH				?=i
 export ITERATIONS	?=700
 # Paths
 export root_dir := $(shell pwd)
-export tst_dir  := $(root_dir)/tests
+export tst_dir  := $(root_dir)/src
 export inc_dir  := $(tst_dir)/common
 export bld_dir  := $(root_dir)/build
 
