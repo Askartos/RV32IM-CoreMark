@@ -3,21 +3,21 @@ Compiling setup to run Coremark on baremetal riscv cores
 
 In order to port this tamplate to your platform you have to modify
 
-1) ./test/common/sc_print.c :
+1) ./src/common/sc_print.c :
 
 	here you have to define any output port for your core e.g. UART
 	
-2) ./test/common/ram.lds :
+2) ./src/common/ram.lds :
 
 	an example of a linker script so you can modify to adjust it to your platform memory map
 	
-3) ./test/common/init_asm.S.lds :
+3) ./src/common/init_asm.S.lds :
 
 	start function that setup the enviorment to call main clears .bss section sets the stack pointer.
 	
 	just modify it if you want something special for your platform.
 	
-4) ./test/benchmarks/coremark/core_portme.c :
+4) ./src/benchmarks/coremark/core_portme.c :
 
 	Here you should modify timing functions => barebones_clock() start_time() stop_time() start_insn() stop_insn() insn()
 	
