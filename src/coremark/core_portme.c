@@ -187,8 +187,8 @@ void portable_fini(core_portable *p)
 	CORE_TICKS total_time=get_time();
 		
 	float Cycles_Per_Instruction = ((float) total_time)/((float) INSNC[2]);	
-	float CoreMark = ((float)(default_num_contexts * ITERATIONS)) /((float) time_in_secs(total_time));	
-	float CoreMark_Per_MHZ= CoreMark/((float) MHZ);
+	float CoreMark_Per_MHZ= ((float)  ( ITERATIONS*1000000) ) /((float) total_time);
+	float CoreMark = CoreMark_Per_MHZ * MHZ;
 	ee_printf("Cycles_Per_Instruction: %f\n",Cycles_Per_Instruction);		
 	ee_printf("CoreMark 1.0 : %f\n",CoreMark);
 	ee_printf("CoreMark/MHz : %f\n",CoreMark_Per_MHZ);
