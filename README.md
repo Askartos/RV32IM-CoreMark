@@ -1,7 +1,7 @@
 # RV32IM-CoreMark
 Compiling setup to run Coremark on baremetal riscv cores
 
-In order to port this tamplate to your platform you have to modify
+In order to port this template to your platform you have to modify
 
 1) ./src/common/sc_print.c :
 
