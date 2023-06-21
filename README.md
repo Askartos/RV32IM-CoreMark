@@ -5,13 +5,13 @@ In order to port this template to your platform you have to modify
 
 1) ./src/common/sc_print.c :
 
-	here you have to define any output port for your core e.g. UART
+	here you have to define a function that can access any output peripheral for your core e.g. UART
 	
 2) ./src/common/ram.lds :
 
 	an example of a linker script so you can modify to adjust it to your platform memory map
 	
-3) ./src/common/init_asm.S.lds :
+3) ./src/common/init_asm.S :
 
 	start function that setup the enviorment to call main clears .bss section sets the stack pointer.
 	
